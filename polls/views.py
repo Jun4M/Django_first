@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from .models import Question
+from .models import Choice
 
 # index(최신글 list)
 def index(request):
@@ -20,7 +22,12 @@ def results(request, question_id):
 def vote(request, question_id):
       return HttpResponse(f"You're voting on question {question_id}.")
 
-
+def aa(request):
+       data = Question.objects.all()
+       data_c = Choice.objects.all()
+       context = {"questions":data,
+                  "choices":data_c}
+       return render(request, "polls/aa.html",context)
 
 
 # # Create your views here.

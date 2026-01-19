@@ -21,6 +21,6 @@ urlpatterns = [
     path("polls/", include("polls.urls")),
     # http://127.0.0.1:8000/polls/
     path("admin/", admin.site.urls),
-    path("", include("polls.urls")),
+    # path("", include("polls.urls")),
     # http://127.0.0.1:8000
 ]

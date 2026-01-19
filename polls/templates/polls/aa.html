@@ -1,0 +1,29 @@
+<h1>1번문제:하윙</h1>
+
+<h2>
+2번문제:{{questions}}
+
+</h2>
+
+<h3>
+    3번문제:데이터 꺼내기
+</h3>
+
+{%for question in questions%}
+<ul>
+    <p>원형 데이터 하나씩 꺼내기:{{question}}</p>
+    <p>데이터 아이디 꺼내기:{{question.id}}</p>
+    <p>모델 데이터 제목 가져오기:{{question.question_text}}</p>
+    <p>-------------------------------------------------------</p>
+</ul>
+{%endfor%}
+
+<h4>
+    4번문제: 초이스 전체출력
+</h4>
+
+{%for choice in choices%}
+<ul>
+    <p>{{choice}}</p>
+</ul>
+{%endfor%}
