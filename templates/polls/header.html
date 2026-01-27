@@ -7,8 +7,6 @@
       <ul>
         <li><a href="{% url 'polls:index' %}">HOME</a></li>
         <li><a href="{% url 'admin:index' %}">Admin Home</a></li>
-        <li><a href="{% url 'polls:index' %}">Site Home</a></li>
-        <li><a href="{% url 'admin:index' %}">Admin Home</a></li>
 
         {% if user.is_authenticated %}
           <li>

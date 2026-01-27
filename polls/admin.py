@@ -27,6 +27,8 @@ class QuestionAdmin(admin.ModelAdmin):
         ("날짜정보", {"fields": ["pub_date"], "classes": ["collapse"]}),
     ]
 
+
+
 # 등록
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Choice)
